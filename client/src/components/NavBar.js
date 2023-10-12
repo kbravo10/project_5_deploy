@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 //returns a navigation bar with links to a desired path
 function NavBar({ onLogout }) {
   function onHandleLogout() {
-    fetch("/logout", {
+    fetch("https://phase-5-api-o5ni.onrender.com/logout", {
       method: "DELETE",
     }).then((r) => onLogout(null));
   }

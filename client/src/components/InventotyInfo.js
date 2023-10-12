@@ -11,7 +11,7 @@ function InventoryInfo({ inv }) {
       action = "restock";
     }
 
-    fetch(`/inventory/${inv.id}`, {
+    fetch(`https://phase-5-api-o5ni.onrender.com/inventory/${inv.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

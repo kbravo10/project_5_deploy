@@ -21,7 +21,7 @@ function App() {
   //chech session to see if the user is logged in to set the state of is logged
   //used for auto logged in
   useEffect(() => {
-    fetch("/check_session").then((r) => {
+    fetch("https://phase-5-api-o5ni.onrender.com/check_session").then((r) => {
       if (r.ok) {
         r.json().then((data) => setIsLogged((isLogged) => (isLogged = data)));
       }

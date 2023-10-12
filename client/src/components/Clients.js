@@ -7,7 +7,7 @@ function Clients() {
 
   //useeffect to only render once fetch
   useEffect(() => {
-    fetch("/clients")
+    fetch("https://phase-5-api-o5ni.onrender.com/clients")
       .then((r) => r.json())
       .then((data) => setClients((clients) => (clients = data)));
   }, []);

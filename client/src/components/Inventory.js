@@ -8,7 +8,7 @@ function Inventory() {
   // use fetch to aquire data
   //use effect to only render once
   useEffect(() => {
-    fetch("/inventory")
+    fetch("https://phase-5-api-o5ni.onrender.com/inventory")
       .then((r) => r.json())
       .then((data) => setInventory((inventory) => (inventory = data)));
   }, []);

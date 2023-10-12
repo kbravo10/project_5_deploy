@@ -14,7 +14,7 @@ function Medication_times({ userInfo }) {
   //use fetch to quire data
   //useeffect to only render once
   useEffect(() => {
-    fetch("/medication_times")
+    fetch("https://phase-5-api-o5ni.onrender.com/medication_times")
       .then((r) => r.json())
       .then((data) => {
         setMed_times(data.med_time);
@@ -39,7 +39,7 @@ function Medication_times({ userInfo }) {
     },
     validationSchema: formSchema,
     onSubmit: (values) => {
-      fetch("medication_times", {
+      fetch("https://phase-5-api-o5ni.onrender.com/medication_times", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function Medication_times({ userInfo }) {
   function handleDeleteTime(event) {
     event.preventDefault();
     const deleteTime = Object.fromEntries(new FormData(event.target).entries());
-    fetch(`/medication_times/${deleteTime.timeSlotId}`, {
+    fetch(`https://phase-5-api-o5ni.onrender.com/medication_times/${deleteTime.timeSlotId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

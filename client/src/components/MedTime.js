@@ -8,7 +8,7 @@ function MedTime({ mt, userInfo }) {
     console.log(userInfo);
     setSignrdOff((signedOff) => (signedOff = userInfo.name));
     console.log(mt.id);
-    fetch(`/medication_times/${mt.id}`, {
+    fetch(`https://phase-5-api-o5ni.onrender.com/medication_times/${mt.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
